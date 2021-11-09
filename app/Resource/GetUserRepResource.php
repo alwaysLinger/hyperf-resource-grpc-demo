@@ -22,7 +22,7 @@ class GetUserRepResource extends GrpcResource
     public function toArray(): array
     {
         return [
-            'users' => HiUserResource::collection($this->resource->get('users')),
+            'users' => HiUserResource::collection($this->resource),
         ];
     }
 

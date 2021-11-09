@@ -35,10 +35,6 @@ class HiUserController
             new User(['name' => 'baz']),
         ]);
 
-        $rep = collect([
-            'users' => $users,
-        ]);
-
-        return GetUserRepResource::make($rep)->toMessage();
+        return GetUserRepResource::make($users)->toMessage();
     }
 }
