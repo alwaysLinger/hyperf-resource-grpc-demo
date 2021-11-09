@@ -19,6 +19,7 @@
         "hyperf/database": "~2.2.0",
         "hyperf/db-connection": "~2.2.0",
         "hyperf/framework": "~2.2.0",
+        "hyperf/grpc-server": "^2.2",
         "hyperf/guzzle": "~2.2.0",
         "hyperf/http-server": "~2.2.0",
         "hyperf/logger": "~2.2.0",
@@ -46,6 +47,8 @@
     },
     "autoload": {
         "psr-4": {
+            "GPBMetadata\\": "proto/grpc/GPBMetadata",
+            "Grpc\\": "proto/grpc/Grpc",
             "App\\": "app/"
         },
         "files": []
