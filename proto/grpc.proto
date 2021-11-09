@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+// @see https://hyperf.wiki/2.2/#/zh-cn/grpc
+package grpc;
+
+service hi {
+  rpc sayHello (HiUser) returns (HiReply) {}
+  rpc getUsers (GetUserReq) returns (GetUserRep) {}
+}
+
+message HiUser {
+  string name = 1;
+  int32 sex = 2;
+}
+
+message HiReply {
+  string message = 1;
+  HiUser user = 2;
+}
+
+// Empty request
+message GetUserReq {}
+
+message GetUserRep {
+  repeated HiUser users = 1;
+}
